@@ -33,5 +33,5 @@ tzdata==2023.3
 uvicorn==0.22.0
 xgboost==1.6.2
 pickle5
-numpy>=1.18.0
-python>=3.8
+numpy==1.18.0
+python==3.8
