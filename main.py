@@ -33,4 +33,5 @@ async def count_reviews_endpoint(start_date: str, end_date: str) -> Tuple[int, f
     total_users, recommend_percentage = count_reviews_between_dates(df_reviews, start_date, end_date)
     return total_users, round(recommend_percentage, 2)
 
-
+# start_date = '2011-11-05'
+# end_date = '2013-09-08'
