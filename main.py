@@ -9,9 +9,9 @@ app = FastAPI()
 
 
 
-df_games = pd.read_pickle('games.pkl', protocol=4)
-df_items = pd.read_pickle('playtime.pkl', protocol=4)
-df_reviews = pd.read_pickle('reviews.pkl', protocol=4)
+df_games = pd.read_pickle('games.pkl')
+df_items = pd.read_pickle('playtime.pkl')
+df_reviews = pd.read_pickle('reviews.pkl')
 
 # Endpoints 
 
