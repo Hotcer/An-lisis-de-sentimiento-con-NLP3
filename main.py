@@ -7,9 +7,9 @@ from typing import Tuple
 app = FastAPI()
 
 
-
-
-df_games = pd.read_pickle('games.pkl')
+with open('games.pkl', 'rb') as f:
+  data = f.read()[2:] # eliminar primeros 2 bytes
+#df_games = pickle.loads(data)
 df_items = pd.read_pickle('playtime.pkl')
 df_reviews = pd.read_pickle('reviews.pkl')
 
