@@ -11,9 +11,9 @@ import pickle
 
 # Especifica el protocolo al cargar los archivos
 with open('games.pkl', 'rb') as games_file, open('playtime.pkl', 'rb') as playtime_file, open('reviews.pkl', 'rb') as reviews_file:
-    games_data = pickle.load(games_file, protocol=4)  # Cambiar a protocol=4 o protocol=3 si es necesario
-    playtime_data = pickle.load(playtime_file, protocol=4)  # Cambiar a protocol=4 o protocol=3 si es necesario
-    df_reviews = pickle.load(reviews_file, protocol=4)  # Cambiar a protocol=4 o protocol=3 si es necesario
+    games_data = pickle.load(games_file, protocol=4)  
+    playtime_data = pickle.load(playtime_file, protocol=4)  
+    df_reviews = pickle.load(reviews_file, protocol=4)  
 
 
 # Definir la función para contar las reseñas entre dos fechas
