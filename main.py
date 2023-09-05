@@ -7,10 +7,14 @@ import pickle
 app = FastAPI()
 
 # Cargar los datos desde los archivos
+import pickle
+
+# Especifica el protocolo al cargar los archivos
 with open('games.pkl', 'rb') as games_file, open('playtime.pkl', 'rb') as playtime_file, open('reviews.pkl', 'rb') as reviews_file:
-    games_data = pickle.load(games_file)
-    playtime_data = pickle.load(playtime_file)
-    df_reviews = pickle.load(reviews_file)
+    games_data = pickle.load(games_file, protocol=4)  # Cambiar a protocol=4 o protocol=3 si es necesario
+    playtime_data = pickle.load(playtime_file, protocol=4)  # Cambiar a protocol=4 o protocol=3 si es necesario
+    df_reviews = pickle.load(reviews_file, protocol=4)  # Cambiar a protocol=4 o protocol=3 si es necesario
+
 
 # Definir la función para contar las reseñas entre dos fechas
 def count_reviews_between_dates(df, start_date, end_date):
